@@ -18,12 +18,21 @@ function App() {
   const toggleTheme = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
+
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
       <AppContainer>
         <ThemeChangeButton onClick={toggleTheme}>
-          Change theme
+          {theme === "light" ? (
+            <span role="img" aria-label="sheep">
+              🌛
+            </span>
+          ) : (
+            <span role="img" aria-label="sheep">
+              🌝
+            </span>
+          )}
         </ThemeChangeButton>
         <Switch>
           <Route component={Home} path="/" exact />
