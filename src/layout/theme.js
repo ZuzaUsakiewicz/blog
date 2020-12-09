@@ -20,6 +20,9 @@ export const ThemeChangeButton = styled.button`
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
   background-color: ${(props) => props.theme.fontColor};
   color: ${(props) => props.theme.body};
   outline: none;
