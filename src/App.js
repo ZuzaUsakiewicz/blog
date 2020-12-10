@@ -23,8 +23,8 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
+      <Navigation />
       <AppContainer>
-        <Navigation />
         <ThemeChangeButton onClick={toggleTheme}>
           {theme === "light" ? (
             <span role="img" aria-label="sheep">

@@ -13,18 +13,17 @@ export const darkTheme = {
 };
 
 export const AppContainer = styled.div`
-  width: 100vw;
   height: 100vh;
 `;
 export const ThemeChangeButton = styled.button`
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   position: fixed;
-  bottom: 5px;
-  right: 5px;
+  bottom: 10px;
+  right: 10px;
   background-color: ${(props) => props.theme.fontColor};
   color: ${(props) => props.theme.body};
   outline: none;
@@ -33,12 +32,12 @@ export const ThemeChangeButton = styled.button`
 
 export const GlobalStyles = createGlobalStyle`
 *, html {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 body {
+  box-sizing: border-box;
     background-color: ${(props) => props.theme.body};
     transition: background-color 0.5s ease-in;
     color: ${(props) => props.theme.fontColor};
