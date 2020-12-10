@@ -12,6 +12,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import SinglePost from "./components/SinglePost";
 import Post from "./components/Post";
+import Navigation from "./components/Navigation";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -23,6 +24,7 @@ function App() {
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
       <AppContainer>
+        <Navigation />
         <ThemeChangeButton onClick={toggleTheme}>
           {theme === "light" ? (
             <span role="img" aria-label="sheep">

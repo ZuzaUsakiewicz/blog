@@ -3,11 +3,13 @@ import styled, { createGlobalStyle } from "styled-components";
 export const lightTheme = {
   body: "#fff",
   fontColor: "#000",
+  navbarBg: "blue",
 };
 
 export const darkTheme = {
   body: "#000",
   fontColor: "#fff",
+  navbarBg: "yellow",
 };
 
 export const AppContainer = styled.div`
