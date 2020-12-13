@@ -18,6 +18,7 @@ export const Navbar = styled.nav`
   left: 0;
   display: flex;
   justify-content: space-between;
+  transition: background 0.5s ease-in;
 `;
 
 export const NavigationLink = styled(NavLink)`
@@ -46,6 +47,7 @@ export const Links = styled.div`
   right: 0;
   width: ${({ isOpen }) => (isOpen ? "100vw" : "")};
   height: ${({ isOpen }) => (isOpen ? "50vh" : "")};
+  transition: background 0.5s ease-in;
   @media screen and (min-width: 600px) {
     display: flex;
     padding: 0 20px;

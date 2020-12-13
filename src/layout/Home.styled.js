@@ -1,20 +1,34 @@
 import styled from "styled-components";
+import background from "../images/backgroundhome.jpg";
+import { Link } from "react-router-dom";
 
 export const HomeContainer = styled.section`
   width: 100%;
   height: 100vh;
-  max-width: 1280px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-`;
-
-export const CardsContainer = styled.div`
+  background-image: url(${background});
+  box-shadow: ${({ theme }) => theme.boxShadow};
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-export const Card = styled.div`
-  padding: 2rem;
-  background: red;
+export const ToAction = styled(Link)`
+  padding: 20px 30px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: ${({ theme }) => theme.fontColor};
+  border: none;
+  border-radius: 5px;
+  background: ${({ theme }) => theme.navbarBg};
+  cursor: pointer;
+`;
+
+export const HeroContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 `;

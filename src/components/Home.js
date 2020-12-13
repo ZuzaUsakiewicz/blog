@@ -1,13 +1,13 @@
 import React from "react";
-import { HomeContainer, CardsContainer, Card } from "../layout/Home.styled";
+import { HomeContainer, HeroContent, ToAction } from "../layout/Home.styled";
 
 const Home = () => {
   return (
     <HomeContainer>
-      <CardsContainer>
-        <Card>Book</Card>
-        <Card>Programming</Card>
-      </CardsContainer>
+      <HeroContent>
+        <h1>Front-end, książki</h1>
+        <ToAction to="/post">Blog</ToAction>
+      </HeroContent>
     </HomeContainer>
   );
 };
