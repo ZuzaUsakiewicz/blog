@@ -5,6 +5,7 @@ export const lightTheme = {
   fontColor: "#000",
   navbarBg: "blue",
   boxShadow: "inset 1000px 1000px 10px 10px rgba(0, 0, 0, 0.11)",
+  postShadow: "0 2px 10px 2px rgb(179, 175, 175)",
 };
 
 export const darkTheme = {
@@ -12,6 +13,7 @@ export const darkTheme = {
   fontColor: "#fff",
   navbarBg: "yellow",
   boxShadow: "inset 1000px 1000px 10px 10px rgba(0, 0, 0, 0.582)",
+  postShadow: "0 2px 10px 2px rgb(20, 20, 20)",
 };
 
 export const fontSize = {

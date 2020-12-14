@@ -12,15 +12,17 @@ export const PostsContainer = styled.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 export const Article = styled.article`
   margin: 0 auto;
   background: white;
-  box-shadow: 0 2px 10px 2px rgb(179, 175, 175);
+  box-shadow: ${({ theme }) => theme.postShadow};
   border-radius: 20px;
   margin: 10px 0;
+
   @media screen and (min-width: 600px) {
     width: calc(45vw - 10px);
   }
@@ -37,7 +39,7 @@ export const PostImage = styled.img`
 `;
 export const Title = styled.h3`
   text-decoration: none;
-  color: ${(props) => props.theme.fontColor};
+  color: black;
   padding: 20px;
 `;
 
