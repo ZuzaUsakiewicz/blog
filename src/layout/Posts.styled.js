@@ -20,7 +20,6 @@ export const Article = styled.article`
   margin: 0 auto;
   background: white;
   box-shadow: ${({ theme }) => theme.postShadow};
-  border-radius: 20px;
   margin: 10px 0;
 
   @media screen and (min-width: 600px) {
@@ -32,7 +31,6 @@ export const PostImage = styled.img`
   width: 90vw;
   height: 200px;
   object-fit: cover;
-  border-radius: 20px 20px 0 0;
   @media screen and (min-width: 600px) {
     width: calc(45vw - 10px);
   }

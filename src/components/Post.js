@@ -17,6 +17,7 @@ const Post = () => {
         `*[_type == "post"] {
     title, 
     slug, 
+    publishedAt,
     mainImage{
       asset-> {
         _id,
@@ -48,6 +49,7 @@ const Post = () => {
                   alt={post.mainImage.alt}
                 />
                 <Title>{post.title}</Title>
+                <p>{post.publishedAt}</p>
               </PostLink>
             </Article>
           ))}

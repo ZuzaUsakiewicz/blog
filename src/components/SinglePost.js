@@ -3,6 +3,17 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
+import {
+  SinglePostContainer,
+  PostContainer,
+  BlockContentContainer,
+  Heading,
+  PostTitle,
+  PostImage,
+  AuthorContent,
+  AuthorImage,
+  Author,
+} from "../layout/SinglePost.styled";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -20,6 +31,7 @@ const SinglePost = () => {
     title,
     _id,
     slug,
+    publishedAt,
     mainImage{
       asset->{
         _id,
@@ -38,32 +50,32 @@ const SinglePost = () => {
   if (!singlePost) return <div>Loading...</div>;
 
   return (
-    <main>
-      <article>
-        <header>
-          <div>
-            <div>
-              <h1>{singlePost.title}</h1>
-              <div>
-                <img
-                  src={urlFor(singlePost.authorImage).width(200).url()}
-                  alt={singlePost.name}
-                />
-                <p>{singlePost.name}</p>
-              </div>
-            </div>
-          </div>
-          <img src={singlePost.mainImage.asset.url} alt={singlePost.title} />
-        </header>
-        <div>
+    <SinglePostContainer>
+      <PostContainer>
+        <Heading>
+          <PostImage
+            src={singlePost.mainImage.asset.url}
+            alt={singlePost.title}
+          />
+          <PostTitle>{singlePost.title}</PostTitle>
+          <span>{singlePost.publishedAt}</span>
+        </Heading>
+        <BlockContentContainer>
           <BlockContent
             blocks={singlePost.body}
             projectId="8wj83y2h"
             dataset="production"
           />
-        </div>
-      </article>
-    </main>
+        </BlockContentContainer>
+        <AuthorContent>
+          <AuthorImage
+            src={urlFor(singlePost.authorImage).url()}
+            alt={singlePost.name}
+          />
+          <Author>{singlePost.name}</Author>
+        </AuthorContent>
+      </PostContainer>
+    </SinglePostContainer>
   );
 };
 
