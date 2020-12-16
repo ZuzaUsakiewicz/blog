@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import background from "../images/backgroundhome.jpg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-export const HomeContainer = styled.section`
+export const HomeContainer = styled(motion.section)`
   width: 100%;
   height: 100vh;
   background-image: url(${background});

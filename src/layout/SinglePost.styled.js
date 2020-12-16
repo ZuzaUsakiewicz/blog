@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const SinglePostContainer = styled.section`
+export const SinglePostContainer = styled(motion.section)`
   max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto;

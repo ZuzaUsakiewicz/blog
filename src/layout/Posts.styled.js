@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
-export const PostsPageContainer = styled.section`
+import { motion } from "framer-motion";
+export const PostsPageContainer = styled(motion.section)`
   width: 100%;
   display: flex;
   flex-direction: column;

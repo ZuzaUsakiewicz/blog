@@ -13,6 +13,7 @@ import About from "./components/About";
 import SinglePost from "./components/SinglePost";
 import Post from "./components/Post";
 import Navigation from "./components/Navigation";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -36,12 +37,14 @@ function App() {
             </span>
           )}
         </ThemeChangeButton>
-        <Switch>
-          <Route component={Home} path="/" exact />
-          <Route component={About} path="/about" />
-          <Route component={SinglePost} path="/post/:slug" />
-          <Route component={Post} path="/post" />
-        </Switch>
+        <AnimatePresence exitBeforeEnter>
+          <Switch>
+            <Route component={Home} path="/" exact />
+            <Route component={About} path="/about" />
+            <Route component={SinglePost} path="/post/:slug" />
+            <Route component={Post} path="/post" />
+          </Switch>
+        </AnimatePresence>
       </AppContainer>
     </ThemeProvider>
   );

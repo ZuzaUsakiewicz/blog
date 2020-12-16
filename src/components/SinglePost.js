@@ -14,6 +14,7 @@ import {
   AuthorImage,
   Author,
 } from "../layout/SinglePost.styled";
+import { pageTransition } from "../animation/animation";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -50,7 +51,12 @@ const SinglePost = () => {
   if (!singlePost) return <div>Loading...</div>;
 
   return (
-    <SinglePostContainer>
+    <SinglePostContainer
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageTransition}
+    >
       <PostContainer>
         <Heading>
           <PostImage

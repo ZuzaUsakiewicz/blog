@@ -8,6 +8,7 @@ import {
   Title,
   PostLink,
 } from "../layout/Posts.styled";
+import { pageTransition } from "../animation/animation";
 
 const Post = () => {
   const [postData, setPostData] = useState(null);
@@ -33,7 +34,12 @@ const Post = () => {
   }, []);
 
   return (
-    <PostsPageContainer>
+    <PostsPageContainer
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageTransition}
+    >
       <h1>Blog Posts Page</h1>
       <h3>Programming, books and more</h3>
       <PostsContainer>
