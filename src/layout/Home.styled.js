@@ -20,10 +20,10 @@ export const ToAction = styled(Link)`
   font-size: 1rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${({ theme }) => theme.fontColor};
+  color: ${({ theme }) => theme.buttonFont};
   border: none;
   border-radius: 5px;
-  background: ${({ theme }) => theme.navbarBg};
+  background: ${({ theme }) => theme.buttonBg};
   cursor: pointer;
 `;
 
@@ -32,4 +32,10 @@ export const HeroContent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+`;
+
+export const HeroTitle = styled.h1`
+  color: rgb(214, 228, 230);
+  text-shadow: 2px 2px 4px#797777;
+  font-size: 4rem;
 `;

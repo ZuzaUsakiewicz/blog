@@ -1,5 +1,10 @@
 import React from "react";
-import { HomeContainer, HeroContent, ToAction } from "../layout/Home.styled";
+import {
+  HomeContainer,
+  HeroContent,
+  ToAction,
+  HeroTitle,
+} from "../layout/Home.styled";
 import { pageTransition } from "../animation/animation";
 const Home = () => {
   return (
@@ -10,7 +15,7 @@ const Home = () => {
       variants={pageTransition}
     >
       <HeroContent>
-        <h1>Front-end, książki</h1>
+        <HeroTitle>Front-end, książki</HeroTitle>
         <ToAction to="/post">Blog</ToAction>
       </HeroContent>
     </HomeContainer>

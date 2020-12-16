@@ -1,19 +1,23 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const lightTheme = {
-  body: "#fff",
-  fontColor: "#000",
-  navbarBg: "blue",
+  body: "rgb(247, 240, 240)",
+  fontColor: "rgb(72, 67, 73)",
+  navbarBg: "rgb(24, 169, 153)",
   boxShadow: "inset 1000px 1000px 10px 10px rgba(0, 0, 0, 0.11)",
   postShadow: "0 2px 10px 2px rgb(179, 175, 175)",
+  buttonBg: "rgb(24, 169, 153)",
+  buttonFont: "rgb(247, 240, 240)",
 };
 
 export const darkTheme = {
-  body: "#000",
-  fontColor: "#fff",
-  navbarBg: "yellow",
+  body: "#436A8D",
+  fontColor: "rgb(214, 228, 230)",
+  navbarBg: "#1f3236",
   boxShadow: "inset 1000px 1000px 10px 10px rgba(0, 0, 0, 0.582)",
   postShadow: "0 2px 10px 2px rgb(20, 20, 20)",
+  buttonBg: "#222020",
+  buttonFont: "rgb(247, 240, 240)",
 };
 
 export const fontSize = {
@@ -34,7 +38,7 @@ export const ThemeChangeButton = styled.button`
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background-color: ${(props) => props.theme.fontColor};
+  background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.body};
   outline: none;
   transition: background-color 0.5s ease-in, color 0.5s ease-in;
