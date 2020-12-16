@@ -14,6 +14,7 @@ import SinglePost from "./components/SinglePost";
 import Post from "./components/Post";
 import Navigation from "./components/Navigation";
 import { AnimatePresence } from "framer-motion";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <ScrollToTop />
       <GlobalStyles />
       <Navigation />
       <AppContainer>
